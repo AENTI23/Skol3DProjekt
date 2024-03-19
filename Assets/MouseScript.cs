@@ -56,6 +56,7 @@ public class MouseScript : MonoBehaviour
         rotationVector.y = 0;
         Cursor.lockState = CursorLockMode.Confined;
         Instantiate(BrickPrefab[0], brickspawn, Quaternion.identity);
+      
         Debugging = GameObject.FindWithTag("Debug").GetComponent<DebugScript>();
     }
 
