@@ -35,7 +35,7 @@ public class MouseScript : MonoBehaviour
 
     public Vector3 rotationVector;
 
-    Vector3 brickspawn;
+    public Vector3[] brickspawn;
 
     public int BrickNumber;
 
@@ -51,11 +51,23 @@ public class MouseScript : MonoBehaviour
     void Start()
     {
         PickBrick();
-        brickspawn.x = 1;
+        brickspawn[0].x = 1;
         rotationVector = transform.rotation.eulerAngles;
         rotationVector.y = 0;
         Cursor.lockState = CursorLockMode.Confined;
-        Instantiate(BrickPrefab[0], brickspawn, Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[0], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[1], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[2], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[3], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[4], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[5], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[6], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[7], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[8], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[9], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[10], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[11], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn[12], Quaternion.identity);
       
         Debugging = GameObject.FindWithTag("Debug").GetComponent<DebugScript>();
     }
@@ -86,7 +98,6 @@ public class MouseScript : MonoBehaviour
       }
 
 
-      //BrickNumber = BrickRandomNumb;
 
       if(CurrentBrickLimits[BrickNumber] == BrickLimits[BrickNumber])
       {

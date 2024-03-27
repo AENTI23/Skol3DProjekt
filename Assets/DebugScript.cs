@@ -10,6 +10,8 @@ public class DebugScript : MonoBehaviour
     public bool Debug2;
     public bool Debug3;
 
+    public bool Debug4;
+
     public bool Debug1_1;
 
     public GameObject DebugHelpUI;
@@ -67,10 +69,24 @@ public class DebugScript : MonoBehaviour
         if(ActivateDebug == false)
         {
             DebugHelpUI.SetActive(true);
+            ActivateDebug = true;
         }
         else
         {
+            ActivateDebug = false;
             DebugHelpUI.SetActive(false);
+        }
+    }
+
+    void OnTurnOnEmptyArea (InputValue value)
+    {
+        if(Debug4 == false)
+        {
+            Debug4 = true;
+        }
+        else
+        {
+            Debug4 = false;
         }
     }
    

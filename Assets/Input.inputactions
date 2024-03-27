@@ -880,6 +880,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TurnOnEmptyArea",
+                    "type": "Button",
+                    "id": "16150e74-3ef1-43ae-a91b-ae40c52ae418",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -935,6 +944,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "NewBrickInOrderMinus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "115b029d-afa9-4aea-8b96-483c0bc39ad0",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "TurnOnEmptyArea",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
