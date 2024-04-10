@@ -21,6 +21,9 @@ public class trackmouse : MonoBehaviour
     [SerializeField]
     Vector3 posfinal;
 
+    [SerializeField]
+    Vector3 ResetPos;
+
     void Update ()
     {
         
@@ -33,6 +36,11 @@ public class trackmouse : MonoBehaviour
         storeZ = (int)pos.z;
         posfinal = new Vector3(storeX, storeY, storeZ);
         transform.position = posfinal;
+       }
+       else
+       {
+        transform.position = ResetPos;
+        print("ResetPlacePos");
        }
 
     }
