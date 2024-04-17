@@ -11,6 +11,8 @@ TagManager:
   - Grass
   - Placer
   - Debug
+  - PlayerController
+  - RoadPointer
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - BrickPart
   - InsideCancel
   - Empty
-  - 
-  - 
+  - RedPlayer
+  - GreenPlayer
   - 
   - 
   - 

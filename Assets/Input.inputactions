@@ -889,6 +889,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AddEmptyAreaCheckBrick",
+                    "type": "Button",
+                    "id": "a1179c1f-f1d1-40b9-8b42-4bafd6e015a8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -955,6 +964,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "TurnOnEmptyArea",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3b3fbbc-859f-4911-ae26-c9a4a34264f6",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "AddEmptyAreaCheckBrick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

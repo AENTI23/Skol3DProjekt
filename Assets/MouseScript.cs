@@ -45,17 +45,30 @@ public class MouseScript : MonoBehaviour
 
    public DebugScript Debugging;
 
+   public bool SpawnStartBricks;
+
+    [SerializeField] GameObject PlayerController;
+
+    PlayersController PCscript;
+
+    [SerializeField] Vector3 brickspawn2;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerController = GameObject.FindWithTag("PlayerController");
+        PCscript = PlayerController.GetComponent<PlayersController>();
         PickBrick();
         brickspawn[0].x = 1;
         rotationVector = transform.rotation.eulerAngles;
         rotationVector.y = 0;
         Cursor.lockState = CursorLockMode.Confined;
         Instantiate(BrickPrefab[0], brickspawn[0], Quaternion.identity);
+        Instantiate(BrickPrefab[0], brickspawn2, Quaternion.Euler(0,90,0));
+        if(SpawnStartBricks == true)
+        {
         Instantiate(BrickPrefab[0], brickspawn[1], Quaternion.identity);
         Instantiate(BrickPrefab[0], brickspawn[2], Quaternion.identity);
         Instantiate(BrickPrefab[0], brickspawn[3], Quaternion.identity);
@@ -68,12 +81,14 @@ public class MouseScript : MonoBehaviour
         Instantiate(BrickPrefab[0], brickspawn[10], Quaternion.identity);
         Instantiate(BrickPrefab[0], brickspawn[11], Quaternion.identity);
         Instantiate(BrickPrefab[0], brickspawn[12], Quaternion.identity);
+        }
       
         Debugging = GameObject.FindWithTag("Debug").GetComponent<DebugScript>();
     }
 
     public void PickBrick()
     {
+       
       if(Debugging.Debug1 == false)
       {
 
@@ -146,11 +161,12 @@ public class MouseScript : MonoBehaviour
     }
     void OnClick (InputValue value)
     {
-if(PlaceOk!)
+if(PlaceOk! && PCscript.Selecting == false)
 {
     Instantiate(BrickPrefab[BrickNumber], PlacerObject.transform.position, Quaternion.Euler(rotationVector));
     CurrentBrickLimits[BrickNumber] += 1;
     PickBrick();
+    PCscript.SelectPeriod();
     
 }
 else

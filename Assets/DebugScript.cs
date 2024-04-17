@@ -16,6 +16,15 @@ public class DebugScript : MonoBehaviour
 
     public GameObject DebugHelpUI;
 
+    public GameObject emptycontrol;
+
+    emtycontrol emtpy;
+
+    void Start()
+    {
+        emtpy = emptycontrol.GetComponent<emtycontrol>();
+    }
+
 
     void OnNewBrickInOrder (InputValue value)
     {
@@ -88,6 +97,12 @@ public class DebugScript : MonoBehaviour
         {
             Debug4 = false;
         }
+    }
+
+    void OnAddEmptyAreaCheckBrick (InputValue value)
+    {
+      emtpy.SpawnBricks();
+
     }
    
 }
