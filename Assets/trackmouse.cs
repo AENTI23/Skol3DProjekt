@@ -40,7 +40,6 @@ public class trackmouse : MonoBehaviour
        else
        {
         transform.position = ResetPos;
-        print("ResetPlacePos");
        }
 
     }

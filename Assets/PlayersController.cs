@@ -10,11 +10,13 @@ public class PlayersController : MonoBehaviour
 {
     [SerializeField] String[] Players;
 
+
     [SerializeField] Color[] PlayerColors;
 
     public int CurrentPlayer;
 
-    [SerializeField] int[] PlayerPoints;
+   [SerializeField] public int[] PlayerPoints;
+    [SerializeField] public TextMeshProUGUI[] PlayerPointsUI;
 
     [SerializeField] int[] PlayerPlacers;
 
@@ -42,7 +44,7 @@ public class PlayersController : MonoBehaviour
     {
         Placer.SetActive(true);
         SelectText.SetActive(false);
-        ReRunroadbools = false;
+          ReRunroadbools = false;
              Selecting = false;
         if(CurrentPlayer != MaxPlayers)
         {
@@ -65,23 +67,20 @@ public class PlayersController : MonoBehaviour
         Selecting = true;
         SelectText.SetActive(true);
         Placer.SetActive(false);
+      
     }
 
     public void ReRunRoadTriggers()
     {
         ReRunroadbools = true;
-
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GivePointRoad()
     {
         PlayerPoints[CurrentPlayer] += 1;
-        print(PlayerPoints[CurrentPlayer] + "Player Point" + "Player =" + Players[CurrentPlayer]);
-        print("Succesfull Point!");
+        
+        PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();
+        
+      //  print(PlayerPoints[CurrentPlayer] + "Player Point" + "Player =" + Players[CurrentPlayer]);
+      
     }
 }

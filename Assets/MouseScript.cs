@@ -185,5 +185,7 @@ else
     void OnChangeBrick (InputValue value)
     {
         PickBrick();
+
+       
     }
 }

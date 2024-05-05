@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
+using UnityEditor.AnimatedValues;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class RoadPoints : MonoBehaviour
 {
+    
 
     [SerializeField] GameObject PlayerController;
 
@@ -27,9 +33,29 @@ public class RoadPoints : MonoBehaviour
 
     [SerializeField] float NewRotationTimer;
 
-    [SerializeField] Collider otherCollider;
+    [SerializeField] public Collider otherCollider;
+
+    [SerializeField] public Collider otherCollider2;
+
+    [SerializeField] Collider[] otherColliders;
+
+    [SerializeField] GameObject Parent;
 
     bool newrotationbool;
+
+    public bool LockResetC;
+
+    public  bool okok;
+
+    public Collider othercollider3;
+
+    public bool isNotpartoftest;
+
+    
+
+   
+
+    
 
 
 
@@ -39,18 +65,25 @@ public class RoadPoints : MonoBehaviour
         PlayerController = GameObject.FindWithTag("PlayerController");
         PCscript = PlayerController.GetComponent<PlayersController>();
          ThisRender =  gameObject.GetComponent<MeshRenderer>();
+
+         Parent = transform.parent.gameObject;
+
    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PCscript.ReRunroadbools == true)
+        
+        
+        if(PCscript.ReRunroadbools == true && StopPoints == false || PCscript.Selecting == true && StopPoints == false)
         {
             ReRunTrigger();
+    
         }
 
-        if(StopPoints == false && PCscript.Selecting == true)
+
+        if(StopPoints == false && PCscript.Selecting == true && AvailableC == true)
         {
             ThisRender.material = SelectMaterial;
         }
@@ -61,13 +94,22 @@ public class RoadPoints : MonoBehaviour
 
         if(newrotationbool == true)
         {
+            PCscript.ReRunRoadTriggers();
             NewRotationTimer += Time.deltaTime;
-            if(NewRotationTimer > 3)
+            if(NewRotationTimer > 1.8f)
             {
             PCscript.NewRotation();
             newrotationbool = false;
+            NewRotationTimer = 0;
             print("NewRot boool");
             }
+        }
+
+
+        if(otherCollider == null && otherCollider2 == null && PCscript.Selecting == true && StopPoints == false)
+        {
+           // print(Parent.gameObject.transform.position + "cococcaa" + gameObject.name);
+            AvailableC = true;
         }
     }
 
@@ -81,66 +123,112 @@ public class RoadPoints : MonoBehaviour
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
           StopPoints = true;
-          
           newrotationbool = true;
 
-            //Succesfull placering, ny rotation, ge poäng, stop points, ändra material och lager.
-
-            //exempel 
         }
-        print("Hovering");
+    
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) //Denna del behövs inte verkar det som. Ta bort sen när du 100% säker dock.
     {
-        otherCollider = other;
-      
 
-        if(other.gameObject.tag == "RoadPointer" && StopPoints == false && other.gameObject.layer != PCscript.AntiLayers[PCscript.CurrentPlayer])
+       if(isNotpartoftest == true)
+       {
+        
+       otherCollider = other;
+       
+    
+
+        if(otherCollider.gameObject.tag == "RoadPointer" && StopPoints == false && otherCollider.gameObject.layer != PCscript.AntiLayers[PCscript.CurrentPlayer])
         {
-            /*
-            gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
-          ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
-            PCscript.GivePointRoad();
-            PCscript.NewRotation();
-            */
-
-           // StopPoints = true;
+          
             AvailableC = true;
             print("AVAILABLE!");
         }
-        else if(other.gameObject.tag == "RoadPointer" && other.gameObject.layer == PCscript.AntiLayers[PCscript.CurrentPlayer]) //&& StopPoints == false
+        else if(otherCollider.gameObject.tag == "RoadPointer" && StopPoints == false && otherCollider.gameObject.layer != 15)
         {
-            gameObject.layer = other.gameObject.layer;
+
+            gameObject.layer = otherCollider.gameObject.layer;
+          
+           
             if (gameObject.layer == 13)
             {
+                 StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
+                     PCscript.PlayerPoints[0] += 1;
+                  PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
             {
+                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
+                PCscript.PlayerPoints[1] += 1;
+                   PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
-           // PCscript.NewRotation();
-            //lägg till poäng för den som faktiskt äger vägen.
-
+            print("FIRST TIME WORKED");
         }
+       
+        
+       }
     }
 
+        
     void ReRunTrigger()
     {
-        if(otherCollider.gameObject.tag == "RoadPointer" && otherCollider.gameObject.layer == PCscript.AntiLayers[PCscript.CurrentPlayer])
+        if(otherCollider != null) 
         {
+
+         if(otherCollider.gameObject.tag == "RoadPointer" && otherCollider.gameObject.layer != 15 && StopPoints == false)
+        {
+            print(Parent.gameObject.transform.position + "This worked?" + gameObject.name);
             gameObject.layer = otherCollider.gameObject.layer;
+           
+           
             if (gameObject.layer == 13)
             {
+                 StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
+                  PCscript.PlayerPoints[0] += 1;
+                  PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
             {
+                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
+                  PCscript.PlayerPoints[1] += 1;
+                   PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
+            print("Succesfull change");
+            
 
         }
+        }
+        
+        if (otherCollider2 != null)
+        {
+        if( otherCollider2.gameObject.tag == "RoadPointer" && otherCollider2.gameObject.layer != 15 && StopPoints == false)
+        {
+            gameObject.layer = otherCollider2.gameObject.layer;
+          
+           
+            if (gameObject.layer == 13)
+            {
+                 StopPoints = true;
+                  ThisRender.material = ObjectMaterial[0];
+                     PCscript.PlayerPoints[0] += 1;
+                  PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
+            }
+            else if (gameObject.layer == 14)
+            {
+                 StopPoints = true;
+                ThisRender.material = ObjectMaterial[1];
+                 PCscript.PlayerPoints[1] += 1;
+                   PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
+            }
+            print("Succesfull change");
+        }
+        }
+    
 
     }
 }
