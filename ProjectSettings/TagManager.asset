@@ -13,6 +13,7 @@ TagManager:
   - Debug
   - PlayerController
   - RoadPointer
+  - CityPointer
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - RedPlayer
   - GreenPlayer
   - NotClaimed
-  - 
+  - NotClaimedParent
   - 
   - 
   - 

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1636687655629165812}
   - component: {fileID: 4914787402849806748}
   - component: {fileID: 5660473185932942286}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: RoadPoint-2
   m_TagString: RoadPointer
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8337
+  m_VersionIndex: 8346
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -602,12 +602,13 @@ MonoBehaviour:
   NewRotationTimer: 0
   otherCollider: {fileID: 0}
   otherCollider2: {fileID: 0}
-  otherColliders: []
   Parent: {fileID: 0}
   LockResetC: 0
   okok: 0
   othercollider3: {fileID: 0}
   isNotpartoftest: 0
+  thisobject: {fileID: 0}
+  ColliderTimer: 0
 --- !u!65 &1636687655629165812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -791,7 +792,7 @@ GameObject:
   - component: {fileID: 6575377050972175537}
   - component: {fileID: 3417518731628731059}
   - component: {fileID: 4123495638846732949}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: RoadPoint
   m_TagString: RoadPointer
   m_Icon: {fileID: 0}
@@ -1267,7 +1268,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8340
+  m_VersionIndex: 8349
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1376,12 +1377,13 @@ MonoBehaviour:
   NewRotationTimer: 0
   otherCollider: {fileID: 0}
   otherCollider2: {fileID: 0}
-  otherColliders: []
   Parent: {fileID: 0}
   LockResetC: 0
   okok: 0
   othercollider3: {fileID: 0}
   isNotpartoftest: 0
+  thisobject: {fileID: 0}
+  ColliderTimer: 0
 --- !u!65 &8303195165724553243
 BoxCollider:
   m_ObjectHideFlags: 0

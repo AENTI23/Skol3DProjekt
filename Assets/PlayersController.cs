@@ -34,6 +34,8 @@ public class PlayersController : MonoBehaviour
 
     public bool ReRunroadbools;
 
+    public bool ReRunCitybool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class PlayersController : MonoBehaviour
         Placer.SetActive(true);
         SelectText.SetActive(false);
           ReRunroadbools = false;
+          ReRunCitybool = false;
              Selecting = false;
         if(CurrentPlayer != MaxPlayers)
         {
@@ -74,13 +77,22 @@ public class PlayersController : MonoBehaviour
     {
         ReRunroadbools = true;
     }
-    public void GivePointRoad()
+    public void GivePoint()
     {
         PlayerPoints[CurrentPlayer] += 1;
-        
-        PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();
-        
-      //  print(PlayerPoints[CurrentPlayer] + "Player Point" + "Player =" + Players[CurrentPlayer]);
-      
+        PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();   
     }
+    public void GivePointCity()
+    {
+        PlayerPoints[CurrentPlayer] += 2;
+        PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();   
+    }
+
+    public void ReRunCityTriggers()
+    {
+        ReRunCitybool = true;
+
+    }
+
+   
 }

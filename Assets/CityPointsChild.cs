@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class RoadpointsChild : MonoBehaviour
+public class CityPointsChild : MonoBehaviour
 {
-    RoadPoints parentScript;
+     CityPoints parentScript;
 
-    public bool firstcollider;
+    public bool Child1;
+
+    public bool Child2;
+
+    public bool Child3;
+
+    public bool Child4;
       [SerializeField] GameObject Parent;
     // Start is called before the first frame update
     void Start()
     {
-        parentScript = GetComponentInParent<RoadPoints>();
+        parentScript = GetComponentInParent<CityPoints>();
         Parent = transform.parent.gameObject;
     }
 
@@ -27,14 +32,14 @@ public class RoadpointsChild : MonoBehaviour
 
     void OnTriggerEnter(Collider OtherCol)
     {
-        if(firstcollider == true)
+        if(Child1 == true)
         {
 
-        parentScript.otherCollider = OtherCol;
+        parentScript.Collider1 = OtherCol;
         }
-        else
+        else if(Child2 == true)
         {
-            parentScript.otherCollider2 = OtherCol;
+            parentScript.Collider2 = OtherCol;
         }
     }
 }
