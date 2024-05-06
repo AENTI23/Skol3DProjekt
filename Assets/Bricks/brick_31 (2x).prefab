@@ -1954,6 +1954,7 @@ GameObject:
   - component: {fileID: 3619632308117257548}
   - component: {fileID: 4427667077170553293}
   - component: {fileID: 5166163823753449553}
+  - component: {fileID: 4597044945525215287}
   m_Layer: 16
   m_Name: CityPoint
   m_TagString: CityPointer
@@ -5261,7 +5262,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5275
+  m_VersionIndex: 5281
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5393,6 +5394,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &4597044945525215287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620045414332595202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76c67c60286642a88805e311f98547b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 0}
+  StopPoints: 0
+  AvailableC: 0
+  ObjectLayer: 0d0000000e000000
+  ObjectMaterial:
+  - {fileID: 2100000, guid: bcc558d1159a64645adfa3b1f15179a8, type: 2}
+  - {fileID: 2100000, guid: d777ef0df2c314782ad8a065a4547e06, type: 2}
+  SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
+  zeroMaterial: {fileID: 2100000, guid: 06aa0c2a370d24f0289fbe752e8f81e2, type: 2}
+  ThisRender: {fileID: 0}
+  NewRotationTimer: 0
+  Collider1: {fileID: 0}
+  Collider2: {fileID: 0}
+  SelectDisplay: {fileID: 0}
+  DisplayRender: {fileID: 0}
+  DisplayMaterial:
+  - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
+  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
 --- !u!1 &6825290315777897937
 GameObject:
   m_ObjectHideFlags: 0

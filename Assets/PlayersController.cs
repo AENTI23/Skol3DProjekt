@@ -70,7 +70,6 @@ public class PlayersController : MonoBehaviour
         Selecting = true;
         SelectText.SetActive(true);
         Placer.SetActive(false);
-      
     }
 
     public void ReRunRoadTriggers()
