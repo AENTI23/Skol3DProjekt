@@ -124,10 +124,12 @@ MonoBehaviour:
   PlayerController: {fileID: 0}
   StopPoints: 0
   AvailableC: 0
-  ObjectLayer: 0d0000000e000000
+  ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
   - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: 18485b2cfb29c43728e38ceef5583c31, type: 2}
+  - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
@@ -329,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6751528102205966182
 Transform:
   m_ObjectHideFlags: 0
@@ -360,7 +362,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -415,7 +417,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2295891445890829068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -520,7 +522,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2730620451650122565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -625,7 +627,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5280024007664105222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2118,7 +2120,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5288
+  m_VersionIndex: 5297
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2265,21 +2267,27 @@ MonoBehaviour:
   PlayerController: {fileID: 0}
   StopPoints: 0
   AvailableC: 0
-  ObjectLayer: 0d0000000e000000
+  ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: bcc558d1159a64645adfa3b1f15179a8, type: 2}
   - {fileID: 2100000, guid: d777ef0df2c314782ad8a065a4547e06, type: 2}
+  - {fileID: 2100000, guid: 9b286da8e529747578025498689f3406, type: 2}
+  - {fileID: 2100000, guid: 7b12b4e3ef64f42e386810556def7c93, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
   zeroMaterial: {fileID: 2100000, guid: 06aa0c2a370d24f0289fbe752e8f81e2, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
   Collider1: {fileID: 0}
   Collider2: {fileID: 0}
+  Collider3: {fileID: 0}
+  Collider4: {fileID: 0}
   SelectDisplay: {fileID: 0}
   DisplayRender: {fileID: 0}
   DisplayMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
   - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: 18485b2cfb29c43728e38ceef5583c31, type: 2}
+  - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
 --- !u!1 &6289084298054713016
 GameObject:
   m_ObjectHideFlags: 0
@@ -3917,8 +3925,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819765385963976002}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -4170,7 +4178,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7692610575529671800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

@@ -14,6 +14,7 @@ TagManager:
   - PlayerController
   - RoadPointer
   - CityPointer
+  - WaterPointer
   layers:
   - Default
   - TransparentFX
@@ -32,9 +33,9 @@ TagManager:
   - GreenPlayer
   - NotClaimed
   - NotClaimedParent
-  - 
-  - 
-  - 
+  - Kyrka
+  - BluePlayer
+  - YellowPlayer
   - 
   - 
   - 
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 18401857
+    locked: 0
+  - name: UI2
+    uniqueID: 434452777
     locked: 0

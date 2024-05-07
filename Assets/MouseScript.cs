@@ -53,6 +53,8 @@ public class MouseScript : MonoBehaviour
 
     [SerializeField] Vector3 brickspawn2;
 
+    public bool InsideCancelBool;
+
     
 
     // Start is called before the first frame update
@@ -66,7 +68,7 @@ public class MouseScript : MonoBehaviour
         rotationVector.y = 0;
         Cursor.lockState = CursorLockMode.Confined;
         Instantiate(BrickPrefab[0], brickspawn[0], Quaternion.identity);
-        Instantiate(BrickPrefab[0], brickspawn2, Quaternion.Euler(0,90,0));
+      //  Instantiate(BrickPrefab[0], brickspawn2, Quaternion.Euler(0,90,0));
         if(SpawnStartBricks == true)
         {
         Instantiate(BrickPrefab[0], brickspawn[1], Quaternion.identity);
@@ -146,7 +148,7 @@ public class MouseScript : MonoBehaviour
         for(int AL = 0; AL < Connectors.Length; AL ++)
         {
             
-            if(Connectors[AL].ConnectDetected == true && NoErrors == true)
+            if(Connectors[AL].ConnectDetected == true && NoErrors == true && InsideCancelBool == false)
             {
                 PlaceOk = true;
                 AllowObject.material = AllowMaterial[0]; // Byter Material så det transparanta blocket på Placern visar ifall man får placera eller inte. Grön = du får || Röd = du får INTE.
@@ -161,17 +163,22 @@ public class MouseScript : MonoBehaviour
     }
     void OnClick (InputValue value)
     {
-if(PlaceOk! && PCscript.Selecting == false)
+if(PlaceOk! && PCscript.Selecting == false && PlacerObject.activeInHierarchy == true && InsideCancelBool == false)
 {
     Instantiate(BrickPrefab[BrickNumber], PlacerObject.transform.position, Quaternion.Euler(rotationVector));
     CurrentBrickLimits[BrickNumber] += 1;
     PickBrick();
     PCscript.SelectPeriod();
+    PCscript.BricksPlacedTotal += 1;
+    if(PCscript.BricksPlacedTotal == 120)
+    {
+        PCscript.EndGame();
+    }
     
 }
 else
 {
-    print("Nuh uh");
+    print("Not Allowed To Place Currently");
 }
     }
 

@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238210612504243724}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -130,13 +130,13 @@ MonoBehaviour:
     m_Bits: 16
   ErrorLayers:
   - serializedVersion: 2
-    m_Bits: 2704
+    m_Bits: 656
   - serializedVersion: 2
-    m_Bits: 2832
+    m_Bits: 784
   - serializedVersion: 2
-    m_Bits: 2448
+    m_Bits: 400
   - serializedVersion: 2
-    m_Bits: 2944
+    m_Bits: 896
   AllowedConnect: []
   ConnectDetected: 0
   ErrorConnect: []
@@ -206,7 +206,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534309366141335600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -286,13 +286,13 @@ MonoBehaviour:
     m_Bits: 16
   ErrorLayers:
   - serializedVersion: 2
-    m_Bits: 2704
+    m_Bits: 656
   - serializedVersion: 2
-    m_Bits: 2832
+    m_Bits: 784
   - serializedVersion: 2
-    m_Bits: 2448
+    m_Bits: 400
   - serializedVersion: 2
-    m_Bits: 2944
+    m_Bits: 896
   AllowedConnect: []
   ConnectDetected: 0
   ErrorConnect: []
@@ -496,7 +496,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2460172318973293282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -576,13 +576,13 @@ MonoBehaviour:
     m_Bits: 16
   ErrorLayers:
   - serializedVersion: 2
-    m_Bits: 2704
+    m_Bits: 656
   - serializedVersion: 2
-    m_Bits: 2832
+    m_Bits: 784
   - serializedVersion: 2
-    m_Bits: 2448
+    m_Bits: 400
   - serializedVersion: 2
-    m_Bits: 2944
+    m_Bits: 896
   AllowedConnect: []
   ConnectDetected: 0
   ErrorConnect: []
@@ -853,7 +853,9 @@ GameObject:
   - component: {fileID: 7354757091313531392}
   - component: {fileID: 2236145482007550727}
   - component: {fileID: 981452910146432689}
-  m_Layer: 0
+  - component: {fileID: 3674222607613509310}
+  - component: {fileID: 532761269426900451}
+  m_Layer: 11
   m_Name: InsideCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +892,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6734080813049095082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -940,12 +942,56 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3674222607613509310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6734080813049095082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad27be899db24a00b775c87ab952a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlaceScript: {fileID: 0}
+  Collis: {fileID: 0}
+  InsideLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!54 &532761269426900451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6734080813049095082}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &6975826885768471764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1393,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 356
+  m_VersionIndex: 368
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1563,6 +1609,7 @@ MonoBehaviour:
     m_Bits: 64
   pos: {x: 0, y: 0, z: 0}
   posfinal: {x: 0, y: 0, z: 0}
+  ResetPos: {x: 0, y: 0, z: 0}
 --- !u!1 &8243352596367481031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1660,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8243352596367481031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1693,13 +1740,13 @@ MonoBehaviour:
     m_Bits: 16
   ErrorLayers:
   - serializedVersion: 2
-    m_Bits: 2704
+    m_Bits: 656
   - serializedVersion: 2
-    m_Bits: 2832
+    m_Bits: 784
   - serializedVersion: 2
-    m_Bits: 2448
+    m_Bits: 400
   - serializedVersion: 2
-    m_Bits: 2944
+    m_Bits: 896
   AllowedConnect: []
   ConnectDetected: 0
   ErrorConnect: []
@@ -1949,7 +1996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1824101578968573819
 Transform:
   m_ObjectHideFlags: 0
@@ -2066,4 +2113,4 @@ MonoBehaviour:
   PlacerRotation: {x: 0, y: 0, z: 0}
   placer: {fileID: 7571533188412482244}
   msscript: {fileID: 0}
-  childscript: []
+  othercon: {fileID: 0}

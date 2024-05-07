@@ -34,12 +34,19 @@ public class CityPointsChild : MonoBehaviour
     {
         if(Child1 == true)
         {
-
         parentScript.Collider1 = OtherCol;
         }
         else if(Child2 == true)
         {
             parentScript.Collider2 = OtherCol;
+        }
+        else if(Child3 == true)
+        {
+            parentScript.Collider3 = OtherCol;
+        }
+        else if(Child4 == true)
+        {
+            parentScript.Collider4 = OtherCol;
         }
     }
 }

@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayersController : MonoBehaviour
 {
@@ -20,9 +21,8 @@ public class PlayersController : MonoBehaviour
 
     [SerializeField] int[] PlayerPlacers;
 
-    public LayerMask[] AntiLayers;
 
-    public static int MaxPlayers = 1;
+    [SerializeField] public static int MaxPlayers = 1;
 
     [SerializeField] TextMeshProUGUI DisplayName;
 
@@ -36,10 +36,72 @@ public class PlayersController : MonoBehaviour
 
     public bool ReRunCitybool;
 
+    public bool ReRunWaterbool;
+
+    public bool IsGameScene;
+
+    public int BricksPlacedTotal;
+
+    public static int RedPoint;
+
+    public static int GreenPoint;
+
+    public static int BluePoint;
+
+    public static int YellowPoint;
+
     // Start is called before the first frame update
     void Start()
     {
+         if(IsGameScene == true)
+         {
+             print(MaxPlayers + 1 + "This many players (adjusted for array)");
          DisplayName.text = Players[CurrentPlayer];
+         if(MaxPlayers == 1)
+         {
+            PlayerPointsUI[0].gameObject.SetActive(true);
+            PlayerPointsUI[1].gameObject.SetActive(true);
+            PlayerPointsUI[2].gameObject.SetActive(false);
+            PlayerPointsUI[3].gameObject.SetActive(false);
+         }
+         else if(MaxPlayers == 2)
+         {
+            PlayerPointsUI[0].gameObject.SetActive(true);
+            PlayerPointsUI[1].gameObject.SetActive(true);
+            PlayerPointsUI[2].gameObject.SetActive(true);
+            PlayerPointsUI[3].gameObject.SetActive(false);
+         }
+         else if(MaxPlayers == 3)
+         {
+            PlayerPointsUI[0].gameObject.SetActive(true);
+            PlayerPointsUI[1].gameObject.SetActive(true);
+            PlayerPointsUI[2].gameObject.SetActive(true);
+            PlayerPointsUI[3].gameObject.SetActive(true);
+         }
+         }
+    }
+
+    public void TwoPlayers()
+    {
+        MaxPlayers = 1;
+        print(MaxPlayers);
+    }
+
+    public void ThreePlayers()
+    {
+        MaxPlayers = 2;
+        print(MaxPlayers);
+    }
+
+    public void FourPlayers()
+    {
+        MaxPlayers = 3;
+         print(MaxPlayers);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void NewRotation()
@@ -48,6 +110,7 @@ public class PlayersController : MonoBehaviour
         SelectText.SetActive(false);
           ReRunroadbools = false;
           ReRunCitybool = false;
+          ReRunWaterbool = false;
              Selecting = false;
         if(CurrentPlayer != MaxPlayers)
         {
@@ -76,22 +139,40 @@ public class PlayersController : MonoBehaviour
     {
         ReRunroadbools = true;
     }
+    public void ReRunCityTriggers()
+    {
+        ReRunCitybool = true;
+    }
+    public void ReRunWaterTriggers()
+    {
+        ReRunWaterbool = true;
+    }
     public void GivePoint()
     {
         PlayerPoints[CurrentPlayer] += 1;
         PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();   
     }
-    public void GivePointCity()
+    public void GivePointWater()
     {
         PlayerPoints[CurrentPlayer] += 2;
         PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();   
     }
-
-    public void ReRunCityTriggers()
+    public void GivePointCity()
     {
-        ReRunCitybool = true;
-
+        PlayerPoints[CurrentPlayer] += 3;
+        PlayerPointsUI[CurrentPlayer].text = PlayerPoints[CurrentPlayer].ToString();   
     }
+
+    public void EndGame()
+    {
+        RedPoint = PlayerPoints[0];
+        GreenPoint = PlayerPoints[1];
+        BluePoint = PlayerPoints[2];
+        YellowPoint = PlayerPoints[3];
+        
+    }
+
+
 
    
 }

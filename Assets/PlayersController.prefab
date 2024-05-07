@@ -47,22 +47,26 @@ MonoBehaviour:
   Players:
   - Red
   - Green
+  - Blue
+  - Yellow
   PlayerColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.18431373, g: 0.54901963, b: 0.007843138, a: 0}
+  - {r: 0, g: 1, b: 0.9903991, a: 0}
+  - {r: 1, g: 0.9397521, b: 0, a: 0}
   CurrentPlayer: 0
-  PlayerPoints: 0000000000000000
+  PlayerPoints: 00000000000000000000000000000000
   PlayerPointsUI:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   PlayerPlacers: 00000000
-  AntiLayers:
-  - serializedVersion: 2
-    m_Bits: 16384
-  - serializedVersion: 2
-    m_Bits: 8192
   DisplayName: {fileID: 0}
   SelectText: {fileID: 0}
   Selecting: 0
   Placer: {fileID: 0}
   ReRunroadbools: 0
+  ReRunCitybool: 0
+  ReRunWaterbool: 0
+  IsGameScene: 1
