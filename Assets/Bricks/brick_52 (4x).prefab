@@ -321,7 +321,7 @@ Transform:
   m_GameObject: {fileID: 1026801699759437035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.273, z: 0}
+  m_LocalPosition: {x: 0, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,7 +361,6 @@ GameObject:
   - component: {fileID: 6342589571779116680}
   - component: {fileID: 1666899043907276689}
   - component: {fileID: 4594436999184337045}
-  - component: {fileID: 4066935656944290934}
   m_Layer: 17
   m_Name: Building
   m_TagString: Untagged
@@ -778,7 +777,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8400
+  m_VersionIndex: 8415
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -860,28 +859,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577611289310010035}
-  m_Mesh: {fileID: 0}
---- !u!64 &4066935656944290934
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577611289310010035}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1944082386833154853
 GameObject:
@@ -1004,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 1982993571862809004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0.557, z: -0.018}
+  m_LocalPosition: {x: -0.025, y: 0.631, z: -0.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1549,7 +1526,6 @@ GameObject:
   - component: {fileID: 7435660153587566813}
   - component: {fileID: 8566603032528381672}
   - component: {fileID: 2044273601638564020}
-  - component: {fileID: 1936923535533667363}
   m_Layer: 17
   m_Name: Roof
   m_TagString: Untagged
@@ -2067,7 +2043,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4484
+  m_VersionIndex: 4499
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2150,28 +2126,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148618544705999651}
   m_Mesh: {fileID: 0}
---- !u!64 &1936923535533667363
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6148618544705999651}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6477530715346633183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,13 +2184,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StopPoints: 0
   StopClaim: 0
-  ObjectLayer: 0d0000000e000000
+  ObjectLayer: 0d0000000e0000001200000013000000
   RoofMaterial:
   - {fileID: 2100000, guid: bcc558d1159a64645adfa3b1f15179a8, type: 2}
   - {fileID: 2100000, guid: d777ef0df2c314782ad8a065a4547e06, type: 2}
+  - {fileID: 2100000, guid: cabb4b02a033746a1942092477f482b0, type: 2}
+  - {fileID: 2100000, guid: 7b12b4e3ef64f42e386810556def7c93, type: 2}
   WallMaterial:
   - {fileID: 2100000, guid: d6c436671cf51415fb3dbd515f3b1779, type: 2}
   - {fileID: 2100000, guid: d4ea3b6cac22147ebb0a216724c4a5cb, type: 2}
+  - {fileID: 2100000, guid: f2b4fb180d521415cbdc6fa29ce66016, type: 2}
+  - {fileID: 2100000, guid: 6cef8f8fc04bd4c0fb9aab4a2ed9afaf, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
   zeroMaterial: {fileID: 2100000, guid: 9baf6ab760ebf498e94de0ed7dd77380, type: 2}
   KlosterRoofRender: {fileID: 0}

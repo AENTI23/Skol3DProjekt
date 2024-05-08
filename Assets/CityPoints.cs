@@ -94,16 +94,16 @@ public class CityPoints : MonoBehaviour
 
     void OnMouseUp()
     {
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false)
+        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
             PCscript.GivePointCity();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
           DisplayRender.material = DisplayMaterial[PCscript.CurrentPlayer];
+            PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
           StopPoints = true;
           newrotationbool = true;
           SelectDisplay.SetActive(true);
-
         }
     
     }
@@ -124,7 +124,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
-                  PCscript.PlayerPoints[0] += 3;
+                  PCscript.PlayerPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
@@ -133,7 +133,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 3;
+                  PCscript.PlayerPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -142,7 +142,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
-                  PCscript.PlayerPoints[2] += 3;
+                  PCscript.PlayerPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -151,7 +151,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
-                  PCscript.PlayerPoints[3] += 3;
+                  PCscript.PlayerPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -170,7 +170,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
-                  PCscript.PlayerPoints[0] += 3;
+                  PCscript.PlayerPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
@@ -179,7 +179,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 3;
+                  PCscript.PlayerPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -188,7 +188,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
-                  PCscript.PlayerPoints[2] += 3;
+                  PCscript.PlayerPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -197,7 +197,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
-                  PCscript.PlayerPoints[3] += 3;
+                  PCscript.PlayerPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -216,7 +216,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
-                  PCscript.PlayerPoints[0] += 3;
+                  PCscript.PlayerPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
@@ -225,7 +225,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 3;
+                  PCscript.PlayerPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -234,7 +234,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
-                  PCscript.PlayerPoints[2] += 3;
+                  PCscript.PlayerPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -243,7 +243,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
-                  PCscript.PlayerPoints[3] += 3;
+                  PCscript.PlayerPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -262,7 +262,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
-                  PCscript.PlayerPoints[0] += 3;
+                  PCscript.PlayerPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
@@ -271,7 +271,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 3;
+                  PCscript.PlayerPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -280,7 +280,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
-                  PCscript.PlayerPoints[2] += 3;
+                  PCscript.PlayerPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -289,7 +289,7 @@ public class CityPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
-                  PCscript.PlayerPoints[3] += 3;
+                  PCscript.PlayerPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }

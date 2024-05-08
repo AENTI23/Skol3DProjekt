@@ -563,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 2066193745520470685}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0.557, z: -0.018}
+  m_LocalPosition: {x: -0.025, y: 0.624, z: -0.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -807,7 +807,7 @@ Transform:
   m_GameObject: {fileID: 2835025589779561623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.273, z: 0}
+  m_LocalPosition: {x: 0, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -997,13 +997,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StopPoints: 0
   StopClaim: 0
-  ObjectLayer: 0d0000000e000000
+  ObjectLayer: 0d0000000e0000001200000013000000
   RoofMaterial:
   - {fileID: 2100000, guid: bcc558d1159a64645adfa3b1f15179a8, type: 2}
   - {fileID: 2100000, guid: d777ef0df2c314782ad8a065a4547e06, type: 2}
+  - {fileID: 2100000, guid: cabb4b02a033746a1942092477f482b0, type: 2}
+  - {fileID: 2100000, guid: 7b12b4e3ef64f42e386810556def7c93, type: 2}
   WallMaterial:
   - {fileID: 2100000, guid: d6c436671cf51415fb3dbd515f3b1779, type: 2}
   - {fileID: 2100000, guid: d4ea3b6cac22147ebb0a216724c4a5cb, type: 2}
+  - {fileID: 2100000, guid: f2b4fb180d521415cbdc6fa29ce66016, type: 2}
+  - {fileID: 2100000, guid: 6cef8f8fc04bd4c0fb9aab4a2ed9afaf, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
   zeroMaterial: {fileID: 2100000, guid: 9baf6ab760ebf498e94de0ed7dd77380, type: 2}
   KlosterRoofRender: {fileID: 0}
@@ -1345,7 +1349,6 @@ GameObject:
   - component: {fileID: 3504251225878937561}
   - component: {fileID: 2224796048411540496}
   - component: {fileID: 5697534484703680545}
-  - component: {fileID: 5634807665578986973}
   m_Layer: 17
   m_Name: Roof
   m_TagString: Untagged
@@ -1863,7 +1866,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4484
+  m_VersionIndex: 4499
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1945,28 +1948,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4629984852007992473}
-  m_Mesh: {fileID: 0}
---- !u!64 &5634807665578986973
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4629984852007992473}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5547041293734627973
 GameObject:
@@ -2223,8 +2204,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2432,8 +2413,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2589,7 +2570,6 @@ GameObject:
   - component: {fileID: 7137017979298751376}
   - component: {fileID: 7399189893905360080}
   - component: {fileID: 4473621604708575828}
-  - component: {fileID: 3403260532023704447}
   m_Layer: 17
   m_Name: Building
   m_TagString: Untagged
@@ -3006,7 +2986,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8400
+  m_VersionIndex: 8415
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3088,28 +3068,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7386957695417794051}
-  m_Mesh: {fileID: 0}
---- !u!64 &3403260532023704447
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7386957695417794051}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &7463712197649023669
 GameObject:
@@ -3577,8 +3535,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0

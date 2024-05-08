@@ -61,12 +61,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  PlayerPlacers: 00000000
+  PlayerPlacers: 05000000050000000500000005000000
   DisplayName: {fileID: 0}
   SelectText: {fileID: 0}
   Selecting: 0
   Placer: {fileID: 0}
+  SkipButton: {fileID: 0}
   ReRunroadbools: 0
   ReRunCitybool: 0
   ReRunWaterbool: 0
   IsGameScene: 1
+  BricksPlacedTotal: 0

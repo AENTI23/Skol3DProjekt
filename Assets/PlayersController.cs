@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayersController : MonoBehaviour
 {
@@ -19,8 +20,11 @@ public class PlayersController : MonoBehaviour
    [SerializeField] public int[] PlayerPoints;
     [SerializeField] public TextMeshProUGUI[] PlayerPointsUI;
 
-    [SerializeField] int[] PlayerPlacers;
+    [SerializeField] public int[] PlayerPlacers;
 
+    [SerializeField] public GameObject[] PlayerPlacersUIs;
+
+    [SerializeField] public GameObject PlacersUiParent;
 
     [SerializeField] public static int MaxPlayers = 1;
 
@@ -31,6 +35,8 @@ public class PlayersController : MonoBehaviour
     public bool Selecting;
 
     [SerializeField] GameObject Placer;
+
+    [SerializeField] GameObject SkipButton;
 
     public bool ReRunroadbools;
 
@@ -108,6 +114,7 @@ public class PlayersController : MonoBehaviour
     {
         Placer.SetActive(true);
         SelectText.SetActive(false);
+        SkipButton.SetActive(false);
           ReRunroadbools = false;
           ReRunCitybool = false;
           ReRunWaterbool = false;
@@ -133,6 +140,10 @@ public class PlayersController : MonoBehaviour
         Selecting = true;
         SelectText.SetActive(true);
         Placer.SetActive(false);
+        SkipButton.SetActive(true);
+        PlacersUiParent.SetActive(true);
+        //PlayerPlacersUIs[Length.(PlayerPlacers[CurrentPlayer])].SetActive(true, )
+
     }
 
     public void ReRunRoadTriggers()

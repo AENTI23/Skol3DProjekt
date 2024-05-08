@@ -117,12 +117,13 @@ public class KlosterPoints : MonoBehaviour
 
     void OnMouseUp()
     {
-        if(StopClaim == false && PCscript.Selecting == true)
+        if(StopClaim == false && PCscript.Selecting == true && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
             StopClaim = true;
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
             KlosterRoofRender.material = RoofMaterial[PCscript.CurrentPlayer];
             KlosterWallsRender.material = WallMaterial[PCscript.CurrentPlayer];
+            PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
             PCscript.NewRotation();
         }
     }

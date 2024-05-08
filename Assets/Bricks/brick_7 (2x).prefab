@@ -160,8 +160,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 2786213729618538373}
   - component: {fileID: 3092783069794932552}
   - component: {fileID: 2366021728519325985}
-  - component: {fileID: 536376802145272365}
   m_Layer: 17
   m_Name: Building
   m_TagString: Untagged
@@ -639,7 +638,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8394
+  m_VersionIndex: 8406
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -721,28 +720,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584470954687380576}
-  m_Mesh: {fileID: 0}
---- !u!64 &536376802145272365
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584470954687380576}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1989377880586562551
 GameObject:
@@ -1980,8 +1957,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2087,13 +2064,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StopPoints: 0
   StopClaim: 0
-  ObjectLayer: 0d0000000e000000
+  ObjectLayer: 0d0000000e0000001200000013000000
   RoofMaterial:
   - {fileID: 2100000, guid: bcc558d1159a64645adfa3b1f15179a8, type: 2}
   - {fileID: 2100000, guid: d777ef0df2c314782ad8a065a4547e06, type: 2}
+  - {fileID: 2100000, guid: cabb4b02a033746a1942092477f482b0, type: 2}
+  - {fileID: 2100000, guid: 7b12b4e3ef64f42e386810556def7c93, type: 2}
   WallMaterial:
   - {fileID: 2100000, guid: d6c436671cf51415fb3dbd515f3b1779, type: 2}
   - {fileID: 2100000, guid: d4ea3b6cac22147ebb0a216724c4a5cb, type: 2}
+  - {fileID: 2100000, guid: f2b4fb180d521415cbdc6fa29ce66016, type: 2}
+  - {fileID: 2100000, guid: 6cef8f8fc04bd4c0fb9aab4a2ed9afaf, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
   zeroMaterial: {fileID: 2100000, guid: 9baf6ab760ebf498e94de0ed7dd77380, type: 2}
   KlosterRoofRender: {fileID: 0}
@@ -2457,7 +2438,7 @@ Transform:
   m_GameObject: {fileID: 8278089153207075348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.273, z: 0}
+  m_LocalPosition: {x: 0, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2592,7 +2573,6 @@ GameObject:
   - component: {fileID: 3660644852646670243}
   - component: {fileID: 1747816407474321070}
   - component: {fileID: 9170954768476053113}
-  - component: {fileID: 4146761483442699840}
   m_Layer: 17
   m_Name: Roof
   m_TagString: Untagged
@@ -3110,7 +3090,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4478
+  m_VersionIndex: 4490
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3192,28 +3172,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9085369202144212418}
-  m_Mesh: {fileID: 0}
---- !u!64 &4146761483442699840
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9085369202144212418}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &9096069838753630638
 GameObject:

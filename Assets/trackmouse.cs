@@ -24,6 +24,16 @@ public class trackmouse : MonoBehaviour
     [SerializeField]
     Vector3 ResetPos;
 
+    [SerializeField]
+    LayerMask AllowedLayers;
+
+    public bool CancelLayers;
+
+    
+    void Start()
+    {
+       if(CancelLayers == true) Camera.main.eventMask = AllowedLayers;
+    }
     void Update ()
     {
         

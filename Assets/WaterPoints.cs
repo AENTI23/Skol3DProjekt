@@ -87,11 +87,12 @@ public class WaterPoints : MonoBehaviour
     void OnMouseUp()
     {
 
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false)
+        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
             PCscript.GivePointWater();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
+          PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
           StopPoints = true;
           newrotationbool = true;
 

@@ -95,16 +95,23 @@ public class RoadPoints : MonoBehaviour
     void OnMouseUp()
     {
 
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false)//bool som blir positiv ifall ontriggerenter godkänner??)
+        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)//bool som blir positiv ifall ontriggerenter godkänner??)
         {
            // PCscript.NewRotation();
             PCscript.GivePoint();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
+          PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
           StopPoints = true;
           newrotationbool = true;
 
         }
+        else
+        {
+
+            print("detected but not claim");
+        }
+        
     
     }
 

@@ -828,7 +828,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7461
+  m_VersionIndex: 7476
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -962,8 +962,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2647
+  m_VersionIndex: 2662
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3628
+  m_VersionIndex: 3643
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2008,8 +2008,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07082108, y: 0.108792625, z: 0.3905294}
-  m_Center: {x: 0.000000059604645, y: -0.000001758337, z: 0.30409682}
+  m_Size: {x: 0.088224165, y: 0.1352615, z: 0.3905294}
+  m_Center: {x: -0.008701488, y: 0.0021121427, z: 0.30409682}
 --- !u!65 &2109871237505344939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2029,8 +2029,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07082108, y: 0.108792625, z: 0.39415097}
-  m_Center: {x: 0.000000059604645, y: -0.000001758337, z: -0.3022858}
+  m_Size: {x: 0.090200655, y: 0.14373776, z: 0.39415097}
+  m_Center: {x: -0.009689733, y: -0.0012638569, z: -0.3022858}
 --- !u!54 &4740197271184219201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2053,8 +2053,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2724,7 +2724,7 @@ Transform:
   m_GameObject: {fileID: 8893116671939412057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.273, z: 0}
+  m_LocalPosition: {x: 0, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

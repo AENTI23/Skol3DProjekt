@@ -21,11 +21,13 @@ public class CameraController : MonoBehaviour
     public Vector3 NorthVector;
 
     public Vector3 SouthVector;
+
     // Start is called before the first frame update
     void Start()
     {
         Vector3 spawnvector = new Vector3(0, 7, 0);
         gameObject.transform.position = spawnvector;
+        
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class CameraController : MonoBehaviour
 
     void OnRight(InputValue input)
     {
-        if(Changemode == true && gameObject.transform.position.y < 42.2f)
+        if(Changemode == true && gameObject.transform.position.x < 42.2f)
         {
              gameObject.transform.position += RightVector;
         }
