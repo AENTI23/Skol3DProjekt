@@ -86,6 +86,7 @@ public class KlosterPoints : MonoBehaviour
        if(gameObject.layer == 13)
        {
             PCscript.PlayerPoints[0] += 8;
+            PCscript.CountingPoints[0] += 8;
             PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             KlosterRoofRender.material = RoofMaterial[0];
             KlosterWallsRender.material = WallMaterial[0];
@@ -93,6 +94,7 @@ public class KlosterPoints : MonoBehaviour
        else if(gameObject.layer == 14)
        {
             PCscript.PlayerPoints[1] += 8;
+            PCscript.CountingPoints[1] += 8;
             PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             KlosterRoofRender.material = RoofMaterial[1];
             KlosterWallsRender.material = WallMaterial[1];
@@ -100,6 +102,7 @@ public class KlosterPoints : MonoBehaviour
        else if(gameObject.layer == 18)
        {
             PCscript.PlayerPoints[2] += 8;
+            PCscript.CountingPoints[2] += 8;
             PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
             KlosterRoofRender.material = RoofMaterial[2];
             KlosterWallsRender.material = WallMaterial[2];
@@ -107,6 +110,7 @@ public class KlosterPoints : MonoBehaviour
        else if(gameObject.layer == 19)
        {
             PCscript.PlayerPoints[3] += 8;
+            PCscript.CountingPoints[3] += 8;
             PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
             KlosterRoofRender.material = RoofMaterial[3];
             KlosterWallsRender.material = WallMaterial[3];
@@ -124,7 +128,10 @@ public class KlosterPoints : MonoBehaviour
             KlosterRoofRender.material = RoofMaterial[PCscript.CurrentPlayer];
             KlosterWallsRender.material = WallMaterial[PCscript.CurrentPlayer];
             PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
+            PCscript.QuickUIfix();
             PCscript.NewRotation();
+                      PCscript.ClaimSound.Play();
+
         }
     }
 }

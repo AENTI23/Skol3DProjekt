@@ -31,9 +31,9 @@ public class RoadPoints : MonoBehaviour
 
     [SerializeField] float NewRotationTimer;
 
-    [SerializeField] public Collider otherCollider;
+    [SerializeField] public Collider Collider;
 
-    [SerializeField] public Collider otherCollider2;
+    [SerializeField] public Collider Collider2;
 
     [SerializeField] GameObject Parent;
 
@@ -57,9 +57,9 @@ public class RoadPoints : MonoBehaviour
     void Update()
     {
         
-        if(PCscript.ReRunroadbools == true && StopPoints == false || PCscript.Selecting == true && StopPoints == false)
+        if(PCscript.ReRunCollisionsBool == true && StopPoints == false || PCscript.Selecting == true && StopPoints == false)
         {
-            ReRunTrigger();
+            ReRunCollisions();
         }
        
 
@@ -74,9 +74,9 @@ public class RoadPoints : MonoBehaviour
 
         if(newrotationbool == true)
         {
-            PCscript.ReRunRoadTriggers();
+            PCscript.ReRunCollisions();
             NewRotationTimer += Time.deltaTime;
-            if(NewRotationTimer > 1.8f)
+            if(NewRotationTimer > 0.1f)
             {
             PCscript.NewRotation();
             newrotationbool = false;
@@ -85,7 +85,7 @@ public class RoadPoints : MonoBehaviour
         }
 
 
-        if(otherCollider == null && otherCollider2 == null && PCscript.Selecting == true && StopPoints == false)
+        if(Collider == null && Collider2 == null && PCscript.Selecting == true && StopPoints == false)
         {
            // print(Parent.gameObject.transform.position + "cococcaa" + gameObject.name);
             AvailableC = true;
@@ -95,15 +95,17 @@ public class RoadPoints : MonoBehaviour
     void OnMouseUp()
     {
 
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)//bool som blir positiv ifall ontriggerenter godkänner??)
+        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
-           // PCscript.NewRotation();
             PCscript.GivePoint();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
           PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
+          PCscript.QuickUIfix();
           StopPoints = true;
           newrotationbool = true;
+          PCscript.ClaimSound.Play();
+
 
         }
         else
@@ -115,24 +117,22 @@ public class RoadPoints : MonoBehaviour
     
     }
 
-
         
-    void ReRunTrigger()
+    void ReRunCollisions()
     {
-        if(otherCollider != null) 
+        if(Collider != null) 
         {
 
-         if(otherCollider.gameObject.tag == "RoadPointer" && otherCollider.gameObject.layer != 15 && StopPoints == false)
+         if(Collider.gameObject.tag == "RoadPointer" && Collider.gameObject.layer != 15 && StopPoints == false)
         {
-            //print(Parent.gameObject.transform.position + "This worked?" + gameObject.name);
-            gameObject.layer = otherCollider.gameObject.layer;
-           
+            gameObject.layer = Collider.gameObject.layer;
            
             if (gameObject.layer == 13)
             {
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   PCscript.PlayerPoints[0] += 1;
+                  PCscript.CountingPoints[0] += 1;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
@@ -140,6 +140,8 @@ public class RoadPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                   PCscript.PlayerPoints[1] += 1;
+                    PCscript.CountingPoints[1] += 1;
+
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
             else if (gameObject.layer == 18)
@@ -147,6 +149,8 @@ public class RoadPoints : MonoBehaviour
                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                   PCscript.PlayerPoints[2] += 1;
+                    PCscript.CountingPoints[2] += 1;
+
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
             }
             else if (gameObject.layer == 19)
@@ -154,6 +158,7 @@ public class RoadPoints : MonoBehaviour
                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                   PCscript.PlayerPoints[3] += 1;
+                    PCscript.CountingPoints[3] += 1;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
             }
        
@@ -162,11 +167,11 @@ public class RoadPoints : MonoBehaviour
         }
         }
         
-        if (otherCollider2 != null)
+        if (Collider2 != null)
         {
-        if( otherCollider2.gameObject.tag == "RoadPointer" && otherCollider2.gameObject.layer != 15 && StopPoints == false)
+        if( Collider2.gameObject.tag == "RoadPointer" && Collider2.gameObject.layer != 15 && StopPoints == false)
         {
-            gameObject.layer = otherCollider2.gameObject.layer;
+            gameObject.layer = Collider2.gameObject.layer;
           
            
             if (gameObject.layer == 13)
@@ -174,6 +179,8 @@ public class RoadPoints : MonoBehaviour
                  StopPoints = true;
                   ThisRender.material = ObjectMaterial[0];
                   PCscript.PlayerPoints[0] += 1;
+                    PCscript.CountingPoints[0] += 1;
+
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
@@ -181,6 +188,7 @@ public class RoadPoints : MonoBehaviour
                  StopPoints = true;
                 ThisRender.material = ObjectMaterial[1];
                   PCscript.PlayerPoints[1] += 1;
+                    PCscript.CountingPoints[1] += 1;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
             else if (gameObject.layer == 18)
@@ -188,6 +196,7 @@ public class RoadPoints : MonoBehaviour
                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[2];
                   PCscript.PlayerPoints[2] += 1;
+                    PCscript.CountingPoints[2] += 1;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
             }
             else if (gameObject.layer == 19)
@@ -195,6 +204,7 @@ public class RoadPoints : MonoBehaviour
                 StopPoints = true;
                 ThisRender.material = ObjectMaterial[3];
                   PCscript.PlayerPoints[3] += 1;
+                    PCscript.CountingPoints[3] += 1;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
             }
     

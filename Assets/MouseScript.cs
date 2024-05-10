@@ -55,6 +55,10 @@ public class MouseScript : MonoBehaviour
 
     public bool InsideCancelBool;
 
+    [SerializeField] AudioSource PlaceAudio;
+
+    
+
     
 
     // Start is called before the first frame update
@@ -126,13 +130,10 @@ public class MouseScript : MonoBehaviour
       ActiveBrick.material = BrickMaterials[BrickNumber];
 
       
-      BrickNumbFix();
+      
     }
 
-    public void BrickNumbFix()
-    {
-
-    }
+  
 
     // Update is called once per frame
     void Update()
@@ -170,6 +171,7 @@ if(PlaceOk! && PCscript.Selecting == false && PlacerObject.activeInHierarchy == 
     PickBrick();
     PCscript.SelectPeriod();
     PCscript.BricksPlacedTotal += 1;
+    PlaceAudio.Play();
     if(PCscript.BricksPlacedTotal == 120)
     {
         PCscript.EndGame();

@@ -8,7 +8,7 @@ public class CityPoints : MonoBehaviour
     [SerializeField] GameObject PlayerController;
     PlayersController PCscript;
 
-    [SerializeField] bool StopPoints;
+    [SerializeField] bool Claimed;
 
     [SerializeField] bool AvailableC;
 
@@ -55,18 +55,18 @@ public class CityPoints : MonoBehaviour
     void Update()
     {
         
-        if(PCscript.ReRunroadbools == true && StopPoints == false || PCscript.Selecting == true && StopPoints == false)
+        if(PCscript.ReRunCollisionsBool == true && Claimed == false || PCscript.Selecting == true && Claimed == false)
         {
             CollisionMethod();
         }
        
 
-        if(StopPoints == false && PCscript.Selecting == true && AvailableC == true)
+        if(Claimed == false && PCscript.Selecting == true && AvailableC == true)
         {
             ThisRender.material = SelectMaterial;
             SelectDisplay.SetActive(true);
         }
-        else if(StopPoints == false)
+        else if(Claimed == false)
         {
             ThisRender.material = zeroMaterial;
             SelectDisplay.SetActive(false);
@@ -75,9 +75,9 @@ public class CityPoints : MonoBehaviour
 
         if(newrotationbool == true)
         {
-            PCscript.ReRunCityTriggers();
+            PCscript.ReRunCollisions();
             NewRotationTimer += Time.deltaTime;
-            if(NewRotationTimer > 1.8f)
+            if(NewRotationTimer > 0.1f)
             {
             PCscript.NewRotation();
             newrotationbool = false;
@@ -86,7 +86,7 @@ public class CityPoints : MonoBehaviour
         }
 
 
-        if(Collider1 == null && Collider2 == null && Collider3 == null && Collider4 == null && PCscript.Selecting == true && StopPoints == false)
+        if(Collider1 == null && Collider2 == null && Collider3 == null && Collider4 == null && PCscript.Selecting == true && Claimed == false)
         {
             AvailableC = true;
         }
@@ -94,16 +94,20 @@ public class CityPoints : MonoBehaviour
 
     void OnMouseUp()
     {
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
+        if(PCscript.Selecting == true && AvailableC == true && Claimed == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
             PCscript.GivePointCity();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
           DisplayRender.material = DisplayMaterial[PCscript.CurrentPlayer];
             PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
-          StopPoints = true;
+            PCscript.QuickUIfix();
+          Claimed = true;
           newrotationbool = true;
           SelectDisplay.SetActive(true);
+                    PCscript.ClaimSound.Play();
+
+
         }
     
     }
@@ -114,44 +118,48 @@ public class CityPoints : MonoBehaviour
         if(Collider1 != null) 
         {
 
-         if(Collider1.gameObject.tag == "CityPointer" && Collider1.gameObject.layer != 15 && StopPoints == false)
+         if(Collider1.gameObject.tag == "CityPointer" && Collider1.gameObject.layer != 15 && Claimed == false)
         {
             //print(Parent.gameObject.transform.position + "This worked?" + gameObject.name);
             gameObject.layer = Collider1.gameObject.layer;
            
             if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
                   PCscript.PlayerPoints[0] += 2;
+                  PCscript.CountingPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
                   PCscript.PlayerPoints[1] += 2;
+                  PCscript.CountingPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
                   PCscript.PlayerPoints[2] += 2;
+                  PCscript.CountingPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
                   PCscript.PlayerPoints[3] += 2;
+                  PCscript.CountingPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -160,44 +168,48 @@ public class CityPoints : MonoBehaviour
         
         if (Collider2 != null)
         {
-        if( Collider2.gameObject.tag == "CityPointer" && Collider2.gameObject.layer != 15 && StopPoints == false)
+        if( Collider2.gameObject.tag == "CityPointer" && Collider2.gameObject.layer != 15 && Claimed == false)
         {
             gameObject.layer = Collider2.gameObject.layer;
           
            
            if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
                   PCscript.PlayerPoints[0] += 2;
+                  PCscript.CountingPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
-                 DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 2;
-                   PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
-                   SelectDisplay.SetActive(true);
+                DisplayRender.material = DisplayMaterial[1];
+                PCscript.PlayerPoints[1] += 2;
+                PCscript.CountingPoints[1] += 2;
+                PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
+                SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
                   PCscript.PlayerPoints[2] += 2;
+                  PCscript.CountingPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
                   PCscript.PlayerPoints[3] += 2;
+                  PCscript.CountingPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -206,44 +218,48 @@ public class CityPoints : MonoBehaviour
         if(Collider3 != null) 
         {
 
-         if(Collider3.gameObject.tag == "CityPointer" && Collider3.gameObject.layer != 15 && StopPoints == false)
+         if(Collider3.gameObject.tag == "CityPointer" && Collider3.gameObject.layer != 15 && Claimed == false)
         {
             //print(Parent.gameObject.transform.position + "This worked?" + gameObject.name);
             gameObject.layer = Collider3.gameObject.layer;
            
             if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
                   PCscript.PlayerPoints[0] += 2;
+                  PCscript.CountingPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
                  DisplayRender.material = DisplayMaterial[1];
                   PCscript.PlayerPoints[1] += 2;
+                  PCscript.CountingPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
                    SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
                  DisplayRender.material = DisplayMaterial[2];
                   PCscript.PlayerPoints[2] += 2;
+                  PCscript.CountingPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
                    SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
                  DisplayRender.material = DisplayMaterial[3];
                   PCscript.PlayerPoints[3] += 2;
+                  PCscript.CountingPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
                    SelectDisplay.SetActive(true);
             }
@@ -252,46 +268,50 @@ public class CityPoints : MonoBehaviour
         if(Collider4 != null) 
         {
 
-         if(Collider4.gameObject.tag == "CityPointer" && Collider4.gameObject.layer != 15 && StopPoints == false)
+         if(Collider4.gameObject.tag == "CityPointer" && Collider4.gameObject.layer != 15 && Claimed == false)
         {
             //print(Parent.gameObject.transform.position + "This worked?" + gameObject.name);
             gameObject.layer = Collider4.gameObject.layer;
            
             if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                   DisplayRender.material = DisplayMaterial[0];
                   PCscript.PlayerPoints[0] += 2;
+                  PCscript.CountingPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
                   SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
-                 DisplayRender.material = DisplayMaterial[1];
-                  PCscript.PlayerPoints[1] += 2;
-                   PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
-                   SelectDisplay.SetActive(true);
+                DisplayRender.material = DisplayMaterial[1];
+                PCscript.PlayerPoints[1] += 2;
+                PCscript.CountingPoints[1] += 2;
+                PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
+                SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
-                 DisplayRender.material = DisplayMaterial[2];
-                  PCscript.PlayerPoints[2] += 2;
-                   PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
-                   SelectDisplay.SetActive(true);
+                DisplayRender.material = DisplayMaterial[2];
+                PCscript.PlayerPoints[2] += 2;
+                PCscript.CountingPoints[2] += 2;
+                PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
+                SelectDisplay.SetActive(true);
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
-                 DisplayRender.material = DisplayMaterial[3];
-                  PCscript.PlayerPoints[3] += 2;
-                   PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
-                   SelectDisplay.SetActive(true);
+                DisplayRender.material = DisplayMaterial[3];
+                PCscript.PlayerPoints[3] += 2;
+                PCscript.CountingPoints[3] += 2;
+                PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
+                SelectDisplay.SetActive(true);
             }
         }
         }

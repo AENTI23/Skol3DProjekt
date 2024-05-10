@@ -30,11 +30,11 @@ public class RoadpointsChild : MonoBehaviour
         if(firstcollider == true)
         {
 
-        parentScript.otherCollider = OtherCol;
+        parentScript.Collider = OtherCol;
         }
         else
         {
-            parentScript.otherCollider2 = OtherCol;
+            parentScript.Collider2 = OtherCol;
         }
     }
 }

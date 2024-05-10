@@ -9,7 +9,7 @@ public class WaterPoints : MonoBehaviour
     [SerializeField] GameObject PlayerController;
     PlayersController PCscript;
 
-    [SerializeField] bool StopPoints;
+    [SerializeField] bool Claimed;
 
     [SerializeField] bool AvailableC;
 
@@ -49,26 +49,26 @@ public class WaterPoints : MonoBehaviour
     void Update()
     {
         
-        if(PCscript.ReRunroadbools == true && StopPoints == false || PCscript.Selecting == true && StopPoints == false)
+        if(PCscript.ReRunCollisionsBool == true && Claimed == false || PCscript.Selecting == true && Claimed == false)
         {
             CollisionMethod();
         }
        
 
-        if(StopPoints == false && PCscript.Selecting == true && AvailableC == true)
+        if(Claimed == false && PCscript.Selecting == true && AvailableC == true)
         {
             ThisRender.material = SelectMaterial;
         }
-        else if(StopPoints == false)
+        else if(Claimed == false)
         {
             ThisRender.material = zeroMaterial;
         }
 
         if(newrotationbool == true)
         {
-            PCscript.ReRunWaterTriggers();
+            PCscript.ReRunCollisions();
             NewRotationTimer += Time.deltaTime;
-            if(NewRotationTimer > 1.5f)
+            if(NewRotationTimer > 0.1f)
             {
             PCscript.NewRotation();
             newrotationbool = false;
@@ -77,7 +77,7 @@ public class WaterPoints : MonoBehaviour
         }
 
 
-        if(Collider1 == null && Collider2 == null && PCscript.Selecting == true && StopPoints == false)
+        if(Collider1 == null && Collider2 == null && PCscript.Selecting == true && Claimed == false)
         {
          
             AvailableC = true;
@@ -87,14 +87,17 @@ public class WaterPoints : MonoBehaviour
     void OnMouseUp()
     {
 
-        if(PCscript.Selecting == true && AvailableC == true && StopPoints == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
+        if(PCscript.Selecting == true && AvailableC == true && Claimed == false && PCscript.PlayerPlacers[PCscript.CurrentPlayer] != 0)
         {
             PCscript.GivePointWater();
             gameObject.layer = ObjectLayer[PCscript.CurrentPlayer];
           ThisRender.material = ObjectMaterial[PCscript.CurrentPlayer];
           PCscript.PlayerPlacers[PCscript.CurrentPlayer] -= 1;
-          StopPoints = true;
+          Claimed = true;
           newrotationbool = true;
+          PCscript.QuickUIfix();
+            PCscript.ClaimSound.Play();
+
 
         }
     
@@ -105,36 +108,41 @@ public class WaterPoints : MonoBehaviour
         if(Collider1 != null) 
         {
 
-         if(Collider1.gameObject.tag == "WaterPointer" && Collider1.gameObject.layer != 15 && StopPoints == false)
+         if(Collider1.gameObject.tag == "WaterPointer" && Collider1.gameObject.layer != 15 && Claimed == false)
         {
             gameObject.layer = Collider1.gameObject.layer;
            
              if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                      PCscript.PlayerPoints[0] += 2;
+                    PCscript.CountingPoints[0] += 2;
+
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
                  PCscript.PlayerPoints[1] += 2;
+                 PCscript.CountingPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
                  PCscript.PlayerPoints[2] += 2;
+                 PCscript.CountingPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
                  PCscript.PlayerPoints[3] += 2;
+                 PCscript.CountingPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
             }
        
@@ -145,37 +153,41 @@ public class WaterPoints : MonoBehaviour
         
         if (Collider2 != null)
         {
-        if( Collider2.gameObject.tag == "WaterPointer" && Collider2.gameObject.layer != 15 && StopPoints == false)
+        if( Collider2.gameObject.tag == "WaterPointer" && Collider2.gameObject.layer != 15 && Claimed == false)
         {
             gameObject.layer = Collider2.gameObject.layer;
           
            
             if (gameObject.layer == 13)
             {
-                 StopPoints = true;
+                 Claimed = true;
                   ThisRender.material = ObjectMaterial[0];
                      PCscript.PlayerPoints[0] += 2;
+                     PCscript.CountingPoints[0] += 2;
                   PCscript.PlayerPointsUI[0].text = PCscript.PlayerPoints[0].ToString();
             }
             else if (gameObject.layer == 14)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[1];
                  PCscript.PlayerPoints[1] += 2;
+                 PCscript.CountingPoints[1] += 2;
                    PCscript.PlayerPointsUI[1].text = PCscript.PlayerPoints[1].ToString();
             }
             else if (gameObject.layer == 18)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[2];
                  PCscript.PlayerPoints[2] += 2;
+                 PCscript.CountingPoints[2] += 2;
                    PCscript.PlayerPointsUI[2].text = PCscript.PlayerPoints[2].ToString();
             }
             else if (gameObject.layer == 19)
             {
-                 StopPoints = true;
+                 Claimed = true;
                 ThisRender.material = ObjectMaterial[3];
                  PCscript.PlayerPoints[3] += 2;
+                 PCscript.CountingPoints[3] += 2;
                    PCscript.PlayerPointsUI[3].text = PCscript.PlayerPoints[3].ToString();
             }
     

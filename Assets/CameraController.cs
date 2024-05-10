@@ -22,6 +22,10 @@ public class CameraController : MonoBehaviour
 
     public Vector3 SouthVector;
 
+     public UnityEngine.UI.Slider MusicSlider;
+
+     public AudioSource musicSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,5 +103,11 @@ public class CameraController : MonoBehaviour
              gameObject.transform.position -= SouthVector;
         }
 
+    }
+
+
+    public void VolumeChange()
+    {
+        musicSource.volume = MusicSlider.value;
     }
 }
