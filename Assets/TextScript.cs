@@ -11,7 +11,7 @@ public class TextScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 1.5f)
+        if(timer > 2.5f)
         {
             timer = 0;
             gameObject.SetActive(false);

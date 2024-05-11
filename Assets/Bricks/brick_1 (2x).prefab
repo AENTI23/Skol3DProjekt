@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1636687655629165812}
   - component: {fileID: 4914787402849806748}
   - component: {fileID: 5660473185932942286}
+  - component: {fileID: 1812011339630538310}
   m_Layer: 16
   m_Name: RoadPoint-2
   m_TagString: RoadPointer
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8364
+  m_VersionIndex: 8370
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -601,8 +602,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!65 &1636687655629165812
@@ -624,8 +625,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.172863, y: 0.18717551, z: 0.45149326}
-  m_Center: {x: 0.03728676, y: 0, z: 0.33722925}
+  m_Size: {x: 0.172863, y: 0.25382268, z: 0.45256424}
+  m_Center: {x: 0.03728676, y: 0.033323586, z: 0.33669376}
 --- !u!65 &4914787402849806748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -645,8 +646,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.43444633, y: 0.18717551, z: 0.18463612}
-  m_Center: {x: -0.2744484, y: 0, z: 0.041124344}
+  m_Size: {x: 0.4159422, y: 0.21846974, z: 0.18463612}
+  m_Center: {x: -0.28370047, y: 0.015647113, z: 0.041124344}
 --- !u!54 &5660473185932942286
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -674,6 +675,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &1812011339630538310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808919410553787245}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2638855, y: 0.25876868, z: 0.2613759}
+  m_Center: {x: -0.073387146, y: 0.035796583, z: 0.1803596}
 --- !u!1 &2376981740737187092
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +809,7 @@ GameObject:
   - component: {fileID: 8303195165724553243}
   - component: {fileID: 6575377050972175537}
   - component: {fileID: 3417518731628731059}
-  - component: {fileID: 4123495638846732949}
+  - component: {fileID: 7444313580251077891}
   m_Layer: 16
   m_Name: RoadPoint
   m_TagString: RoadPointer
@@ -1264,7 +1286,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8367
+  m_VersionIndex: 8373
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1372,8 +1394,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!65 &8303195165724553243
@@ -1395,8 +1417,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.172863, y: 0.18717551, z: 0.412498}
-  m_Center: {x: 0.03728676, y: -3.7827734e-25, z: 0.35672688}
+  m_Size: {x: 0.172863, y: 0.22929859, z: 0.412498}
+  m_Center: {x: 0.03728676, y: 0.02106154, z: 0.35672688}
 --- !u!65 &6575377050972175537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1416,8 +1438,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41068172, y: 0.18717551, z: 0.1960988}
-  m_Center: {x: -0.2863307, y: -4.65353e-26, z: 0.046855688}
+  m_Size: {x: 0.41068172, y: 0.22740221, z: 0.1960988}
+  m_Center: {x: -0.2863307, y: 0.020113349, z: 0.046855688}
 --- !u!54 &3417518731628731059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1445,50 +1467,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &4123495638846732949
-MonoBehaviour:
+--- !u!65 &7444313580251077891
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2801579165028966452}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24205017, y: 0.26937747, z: 0.3482299}
+  m_Center: {x: -0.11287689, y: 0.04110098, z: 0.17306256}
 --- !u!1 &2924766244270155668
 GameObject:
   m_ObjectHideFlags: 0

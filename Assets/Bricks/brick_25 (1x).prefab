@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 12092
+  m_VersionIndex: 12098
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
@@ -3351,7 +3351,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10623
+  m_VersionIndex: 10629
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3453,8 +3453,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1404723, y: 0.18717551, z: 0.35448515}
-  m_Center: {x: 0.021091402, y: 0, z: 0.3857385}
+  m_Size: {x: 0.1404723, y: 0.2411216, z: 0.35448512}
+  m_Center: {x: 0.021091402, y: -0.026973061, z: 0.3857402}
 --- !u!65 &3235219792898935548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3474,8 +3474,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.39617664, y: 0.18717551, z: 0.1647868}
-  m_Center: {x: -0.2935903, y: 0, z: 0.0625117}
+  m_Size: {x: 0.39617667, y: 0.24682982, z: 0.1647868}
+  m_Center: {x: -0.29359335, y: -0.02982717, z: 0.0625117}
 --- !u!54 &362613926394484108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3516,12 +3516,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
-  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: f2f94220737f64b66a4ed52d0154c95f, type: 2}
   - {fileID: 2100000, guid: 7e26a7b3391ed4752a63ad3135352bfd, type: 2}
   - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
@@ -3549,8 +3549,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18680046, y: 0.18717588, z: 0.1428299}
-  m_Center: {x: -0.094499424, y: 0.00000011175871, z: 0.18144654}
+  m_Size: {x: 0.24963626, y: 0.26318908, z: 0.22420749}
+  m_Center: {x: -0.12591736, y: -0.038006514, z: 0.22213961}
 --- !u!1 &8234472258696041416
 GameObject:
   m_ObjectHideFlags: 0

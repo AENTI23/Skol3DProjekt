@@ -348,8 +348,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745784, y: 1.356072, z: 1.98247}
+  m_Center: {x: 0.001434769, y: 0.17803581, z: 0.08386626}
 --- !u!114 &5042400220611882965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,8 +375,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &2738806115879985334
@@ -767,8 +767,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745784, y: 1.3939543, z: 1.98247}
+  m_Center: {x: 0.001434761, y: 0.19697697, z: 0.083866276}
 --- !u!114 &1975947972848020330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,8 +794,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &6473773366644623260
@@ -1432,8 +1432,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745783, y: 1.2769629, z: 1.98247}
+  m_Center: {x: 0.0014347689, y: 0.13848127, z: 0.083866276}
 --- !u!114 &4777680152927754085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,8 +1459,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &3031139903509388960

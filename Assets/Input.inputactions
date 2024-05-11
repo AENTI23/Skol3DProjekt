@@ -1022,7 +1022,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TurnOnEmptyArea",
+                    "name": "TurnOnDEBUG",
                     "type": "Button",
                     "id": "16150e74-3ef1-43ae-a91b-ae40c52ae418",
                     "expectedControlType": "Button",
@@ -1031,7 +1031,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "AddEmptyAreaCheckBrick",
+                    "name": "EndGameTest",
                     "type": "Button",
                     "id": "a1179c1f-f1d1-40b9-8b42-4bafd6e015a8",
                     "expectedControlType": "Button",
@@ -1103,7 +1103,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "TurnOnEmptyArea",
+                    "action": "TurnOnDEBUG",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1114,7 +1114,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "AddEmptyAreaCheckBrick",
+                    "action": "EndGameTest",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

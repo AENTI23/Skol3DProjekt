@@ -773,7 +773,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4499
+  m_VersionIndex: 4502
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1815,7 +1815,7 @@ GameObject:
   - component: {fileID: 8587205393154346860}
   - component: {fileID: 5879877185905893957}
   - component: {fileID: 7265871359123804056}
-  - component: {fileID: 6768727825431695850}
+  - component: {fileID: 3333012066694860335}
   m_Layer: 16
   m_Name: RoadPoint-1
   m_TagString: RoadPointer
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8373
+  m_VersionIndex: 8376
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2400,8 +2400,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!65 &8587205393154346860
@@ -2423,8 +2423,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15681076, y: 0.18717551, z: 0.42357492}
-  m_Center: {x: 0.006128311, y: -3.8010987e-25, z: 0.35118842}
+  m_Size: {x: 0.15681076, y: 0.21335828, z: 0.42357495}
+  m_Center: {x: 0.006128311, y: 0.013091385, z: 0.35118842}
 --- !u!65 &5879877185905893957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2444,8 +2444,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41068172, y: 0.18717551, z: 0.1960988}
-  m_Center: {x: -0.2863307, y: -4.65353e-26, z: 0.046855688}
+  m_Size: {x: 0.41068175, y: 0.21883678, z: 0.19609882}
+  m_Center: {x: -0.2863307, y: 0.015830636, z: 0.046855688}
 --- !u!54 &7265871359123804056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2473,50 +2473,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &6768727825431695850
-MonoBehaviour:
+--- !u!65 &3333012066694860335
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4939968692743875415}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2174, y: 0.21191466, z: 0.28176713}
+  m_Center: {x: -0.14046134, y: 0.012369573, z: 0.10573399}
 --- !u!1 &5361906563823881304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,7 +3497,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 9502
+  m_VersionIndex: 9505
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3628,8 +3605,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!65 &5518893014812881106
@@ -4130,7 +4107,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8415
+  m_VersionIndex: 8418
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

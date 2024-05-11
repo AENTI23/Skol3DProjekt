@@ -47,6 +47,8 @@ public class MouseScript : MonoBehaviour
 
    public bool SpawnStartBricks;
 
+   public bool AllBricksPlaced;
+
     [SerializeField] GameObject PlayerController;
 
     PlayersController PCscript;
@@ -56,6 +58,10 @@ public class MouseScript : MonoBehaviour
     public bool InsideCancelBool;
 
     [SerializeField] AudioSource PlaceAudio;
+
+    [SerializeField] GameObject EndGameText;
+
+    [SerializeField] float Endgametimer;
 
     
 
@@ -67,7 +73,7 @@ public class MouseScript : MonoBehaviour
         PlayerController = GameObject.FindWithTag("PlayerController");
         PCscript = PlayerController.GetComponent<PlayersController>();
         PickBrick();
-        brickspawn[0].x = 1;
+        brickspawn[0].x = 0;
         rotationVector = transform.rotation.eulerAngles;
         rotationVector.y = 0;
         Cursor.lockState = CursorLockMode.Confined;
@@ -119,12 +125,19 @@ public class MouseScript : MonoBehaviour
       }
 
 
-
-      if(CurrentBrickLimits[BrickNumber] == BrickLimits[BrickNumber])
+       bool allbricksplacedlocal = BrickLimits.SequenceEqual(CurrentBrickLimits);
+        if(allbricksplacedlocal == true)
+        {
+            AllBricksPlaced = true;
+        }
+      if(CurrentBrickLimits[BrickNumber] == BrickLimits[BrickNumber] && allbricksplacedlocal == false)
       {
         //print("BrickLimit REACHED!!!!:" + CurrentBrickLimits[BrickNumber] + "This BrickNumber" + BrickNumber);
         print("CHANGING BrICK!!!" + BrickNumber);
         PickBrick();
+       
+      
+        
       }
 
       ActiveBrick.material = BrickMaterials[BrickNumber];
@@ -138,6 +151,19 @@ public class MouseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(AllBricksPlaced == true)
+        {
+            EndGameText.gameObject.SetActive(true);
+            Endgametimer += Time.deltaTime;
+
+            if(Endgametimer > 3f)
+            {
+                PCscript.EndGame();
+    
+
+            }
+            
+        }
         CompareArray[0] = Connectors[0].ErrorDetected;
         CompareArray[1] = Connectors[1].ErrorDetected;
         CompareArray[2] = Connectors[2].ErrorDetected;
@@ -164,18 +190,15 @@ public class MouseScript : MonoBehaviour
     }
     void OnClick (InputValue value)
     {
-if(PlaceOk! && PCscript.Selecting == false && PlacerObject.activeInHierarchy == true && InsideCancelBool == false)
+if(PlaceOk! && PCscript.Selecting == false && PlacerObject.activeInHierarchy == true && InsideCancelBool == false && AllBricksPlaced == false)
 {
     Instantiate(BrickPrefab[BrickNumber], PlacerObject.transform.position, Quaternion.Euler(rotationVector));
     CurrentBrickLimits[BrickNumber] += 1;
-    PickBrick();
+   // PickBrick();
     PCscript.SelectPeriod();
     PCscript.BricksPlacedTotal += 1;
     PlaceAudio.Play();
-    if(PCscript.BricksPlacedTotal == 120)
-    {
-        PCscript.EndGame();
-    }
+   
     
 }
 else
@@ -193,7 +216,11 @@ else
 
     void OnChangeBrick (InputValue value)
     {
+        if(Debugging.TurnOnDebug == true)
+        {
+
         PickBrick();
+        }
 
        
     }

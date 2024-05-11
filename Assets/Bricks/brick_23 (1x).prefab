@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3600
+  m_VersionIndex: 3606
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3591
+  m_VersionIndex: 3597
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4322,7 +4322,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 9585
+  m_VersionIndex: 9591
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4430,8 +4430,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &1326788969597192609
@@ -4736,7 +4736,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3640
+  m_VersionIndex: 3646
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4838,8 +4838,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.086641744, y: 0.13672352, z: 0.3905294}
-  m_Center: {x: -0.007910274, y: -0.0016174316, z: 0.30409682}
+  m_Size: {x: 0.1585253, y: 0.16449022, z: 0.3905294}
+  m_Center: {x: -0.043852054, y: -0.0025918484, z: 0.30409682}
 --- !u!65 &5880033933557750819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4859,8 +4859,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08886321, y: 0.15527964, z: 0.39415097}
-  m_Center: {x: -0.0090210065, y: -0.0014669895, z: -0.3022858}
+  m_Size: {x: 0.13770325, y: 0.20676613, z: 0.39415097}
+  m_Center: {x: -0.03344103, y: -0.007110119, z: -0.3022858}
 --- !u!54 &1832222364858290305
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4901,12 +4901,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
-  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: f2f94220737f64b66a4ed52d0154c95f, type: 2}
   - {fileID: 2100000, guid: 7e26a7b3391ed4752a63ad3135352bfd, type: 2}
   - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}

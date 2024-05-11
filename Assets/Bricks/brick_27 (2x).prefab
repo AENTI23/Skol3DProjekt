@@ -493,7 +493,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 12411
+  m_VersionIndex: 12417
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -595,8 +595,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.45085603, y: 0.18717551, z: 0.46822536}
-  m_Center: {x: -0.029794931, y: 0, z: 0.067191005}
+  m_Size: {x: 0.47531652, y: 0.2862189, z: 0.570526}
+  m_Center: {x: -0.04202518, y: -0.049521744, z: 0.0775187}
 --- !u!54 &2523449652943084549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -637,12 +637,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
-  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: f2f94220737f64b66a4ed52d0154c95f, type: 2}
   - {fileID: 2100000, guid: 7e26a7b3391ed4752a63ad3135352bfd, type: 2}
   - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}

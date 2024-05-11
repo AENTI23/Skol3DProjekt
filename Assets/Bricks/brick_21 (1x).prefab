@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 5143751975211485246}
   - component: {fileID: 6753708342474056576}
   - component: {fileID: 4092762763713914131}
+  - component: {fileID: 26866073053939690}
   m_Layer: 16
   m_Name: WaterPoint
   m_TagString: WaterPointer
@@ -892,7 +893,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10347
+  m_VersionIndex: 10353
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -994,8 +995,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.172863, y: 0.18717551, z: 0.412498}
-  m_Center: {x: 0.03728676, y: -3.7827734e-25, z: 0.35672688}
+  m_Size: {x: 0.172863, y: 0.2809741, z: 0.41249803}
+  m_Center: {x: 0.037286766, y: -0.04689931, z: 0.35672688}
 --- !u!65 &5143751975211485246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1015,8 +1016,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41068172, y: 0.18717551, z: 0.1960988}
-  m_Center: {x: -0.2863307, y: -4.65353e-26, z: 0.046855688}
+  m_Size: {x: 0.41068175, y: 0.25626618, z: 0.1960988}
+  m_Center: {x: -0.2863307, y: -0.034545362, z: 0.046855696}
 --- !u!54 &6753708342474056576
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1057,12 +1058,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
-  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: f2f94220737f64b66a4ed52d0154c95f, type: 2}
   - {fileID: 2100000, guid: 7e26a7b3391ed4752a63ad3135352bfd, type: 2}
   - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
@@ -1071,6 +1072,27 @@ MonoBehaviour:
   NewRotationTimer: 0
   Collider1: {fileID: 0}
   Collider2: {fileID: 0}
+--- !u!65 &26866073053939690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792662314768623288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25100774, y: 0.28849795, z: 0.25160205}
+  m_Center: {x: -0.15061975, y: -0.050661013, z: 0.21692196}
 --- !u!1 &3104609336203286190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,7 +2093,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 8376
+  m_VersionIndex: 8382
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2179,8 +2201,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!65 &5587456544988998274

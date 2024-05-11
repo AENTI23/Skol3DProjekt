@@ -614,8 +614,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745783, y: 1.2663592, z: 1.98247}
+  m_Center: {x: 0.0014347874, y: 0.13317944, z: 0.08386627}
 --- !u!114 &7337317386266124998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,8 +641,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &9121688815387396283
@@ -1065,8 +1065,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745783, y: 1.2409866, z: 1.98247}
+  m_Center: {x: 0.0014347956, y: 0.120493226, z: 0.08386627}
 --- !u!114 &7336484825929923801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,8 +1092,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &3126801512915933672
@@ -1274,8 +1274,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745783, y: 1.1753541, z: 1.98247}
+  m_Center: {x: 0.0014347831, y: 0.08767699, z: 0.083866276}
 --- !u!114 &1407327959023463962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,8 +1301,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &2281643115185253302
@@ -1642,8 +1642,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0745783, y: 1.0750365, z: 1.98247}
-  m_Center: {x: 0.0014347831, y: 0.037518185, z: 0.083866276}
+  m_Size: {x: 1.0745784, y: 1.284507, z: 1.98247}
+  m_Center: {x: 0.001434761, y: 0.14225335, z: 0.083866276}
 --- !u!114 &7745236934098974746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,8 +1669,8 @@ MonoBehaviour:
   zeroMaterial: {fileID: 2100000, guid: 501d7e32d56b149ba87c4f19cf13bad4, type: 2}
   ThisRender: {fileID: 0}
   NewRotationTimer: 0
-  otherCollider: {fileID: 0}
-  otherCollider2: {fileID: 0}
+  Collider: {fileID: 0}
+  Collider2: {fileID: 0}
   Parent: {fileID: 0}
   isNotpartoftest: 0
 --- !u!54 &6569917958897011577

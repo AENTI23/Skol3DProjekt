@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3597
+  m_VersionIndex: 3603
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
@@ -3069,7 +3069,6 @@ GameObject:
   - component: {fileID: 6497648353222394936}
   - component: {fileID: 6978797482707449362}
   - component: {fileID: 7852252586978123644}
-  - component: {fileID: 6365699010221471483}
   - component: {fileID: 8173140225171890197}
   - component: {fileID: 2912803814643669499}
   m_Layer: 16
@@ -3308,7 +3307,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3637
+  m_VersionIndex: 3643
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3410,29 +3409,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07082108, y: 0.108792625, z: 0.3905294}
-  m_Center: {x: 0.000000059604645, y: -0.000001758337, z: 0.30409682}
---- !u!65 &6365699010221471483
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5071467777005386154}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07082108, y: 0.108792625, z: 0.39415097}
-  m_Center: {x: 0.000000059604645, y: -0.000001758337, z: -0.3022858}
+  m_Size: {x: 0.17519374, y: 0.16449833, z: 0.9907098}
+  m_Center: {x: -0.052186273, y: -0.0076885223, z: 0.004006624}
 --- !u!54 &8173140225171890197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3473,12 +3451,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
   - {fileID: 2100000, guid: 132fc0c20976b4abeb93c8e216af65fb, type: 2}
-  - {fileID: 2100000, guid: ef9904daaa3ec476fa3d9e6a90a70ee1, type: 2}
+  - {fileID: 2100000, guid: f2f94220737f64b66a4ed52d0154c95f, type: 2}
   - {fileID: 2100000, guid: 7e26a7b3391ed4752a63ad3135352bfd, type: 2}
   - {fileID: 2100000, guid: c115900fad7014138acca38320a0dc5a, type: 2}
   SelectMaterial: {fileID: 2100000, guid: de10dbc89c2d84e9b9d3fab439ed6e4e, type: 2}
@@ -5887,7 +5865,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3597
+  m_VersionIndex: 3603
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6037,7 +6015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 0}
-  StopPoints: 0
+  Claimed: 0
   AvailableC: 0
   ObjectLayer: 0d0000000e0000001200000013000000
   ObjectMaterial:
