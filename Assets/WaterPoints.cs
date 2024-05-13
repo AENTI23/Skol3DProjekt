@@ -97,6 +97,8 @@ public class WaterPoints : MonoBehaviour
           newrotationbool = true;
           PCscript.QuickUIfix();
             PCscript.ClaimSound.Play();
+                        PCscript.GiveBackPlacers();
+
 
 
         }

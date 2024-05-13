@@ -106,6 +106,8 @@ public class CityPoints : MonoBehaviour
           newrotationbool = true;
           SelectDisplay.SetActive(true);
                     PCscript.ClaimSound.Play();
+                                PCscript.GiveBackPlacers();
+
 
 
         }

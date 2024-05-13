@@ -205,14 +205,14 @@ public class PlayersController : MonoBehaviour
 
     public void GiveBackPlacers()
     {
-        if(CountingPoints[0] > GiveBackLimit && PlayerPlacers[0] != 5)
+        if(CountingPoints[0] > GiveBackLimit && PlayerPlacers[0] != 5 || CountingPoints[0] == GiveBackLimit && PlayerPlacers[0] != 5)
         {
           PlayerPlacers[0] += 1;
           CountingPoints[0] -= GiveBackLimit;
           plustext[0].SetActive(true);
         }
 
-        if(CountingPoints[1] > GiveBackLimit && PlayerPlacers[1] != 5)
+        if(CountingPoints[1] > GiveBackLimit && PlayerPlacers[1] != 5 || CountingPoints[1] == GiveBackLimit && PlayerPlacers[1] != 5)
         {
           PlayerPlacers[1] += 1;
           CountingPoints[1] -= GiveBackLimit;
@@ -220,14 +220,14 @@ public class PlayersController : MonoBehaviour
 
         }
 
-        if(CountingPoints[2] > GiveBackLimit && PlayerPlacers[2] != 5)
+        if(CountingPoints[2] > GiveBackLimit && PlayerPlacers[2] != 5 || CountingPoints[2] == GiveBackLimit && PlayerPlacers[2] != 5)
         {
           PlayerPlacers[2] += 1;
           CountingPoints[2] -= GiveBackLimit;
           plustext[2].SetActive(true);
         }
 
-        if(CountingPoints[3] > GiveBackLimit && PlayerPlacers[3] != 5)
+        if(CountingPoints[3] > GiveBackLimit && PlayerPlacers[3] != 5 || CountingPoints[3] == GiveBackLimit && PlayerPlacers[3] != 5)
         {
           PlayerPlacers[3] += 1;
           CountingPoints[3] -= GiveBackLimit;

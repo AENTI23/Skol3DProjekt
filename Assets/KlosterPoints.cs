@@ -131,6 +131,7 @@ public class KlosterPoints : MonoBehaviour
             PCscript.QuickUIfix();
             PCscript.NewRotation();
                       PCscript.ClaimSound.Play();
+            PCscript.GiveBackPlacers();
 
         }
     }

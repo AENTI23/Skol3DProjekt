@@ -105,6 +105,8 @@ public class RoadPoints : MonoBehaviour
           StopPoints = true;
           newrotationbool = true;
           PCscript.ClaimSound.Play();
+                      PCscript.GiveBackPlacers();
+
 
 
         }
